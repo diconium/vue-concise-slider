@@ -1,8 +1,8 @@
 <template>
-  <div class="slider-wrapper">
+  <div class="">
     <template v-if="pages.length">
       <template v-for="(item, index) in pages">
-        <div class="slider-item" :style="[item.style, transform(index)]">
+        <div class="sl-item" :style="[item.style, transform(index)]">
           <div v-if="!item.component" v-html="item.html"></div>
           <template v-else>
             <component :pages="pages" :item="item" :options="options" :is="item.component" ></component>
